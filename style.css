@@ -1,0 +1,111 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightblue;
+}
+
+table {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2em 0 0 2em;
+}
+
+#sudoku-board {
+    background-color: white;
+    border-collapse: collapse;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 3px black;
+}
+
+#sudoku-board tr {
+    border-bottom: 1px solid black;
+}
+
+#sudoku-board tr:nth-of-type(3n) {
+    border-bottom: 3px solid black;
+}
+
+#sudoku-board td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#sudoku-board td:nth-of-type(3n) {
+    border-right: 3px solid black;
+}
+
+#sudoku-board td:nth-of-type(9n) {
+    border-right: none;
+}
+
+#sudoku-board tr:nth-of-type(1) td:nth-of-type(1) {
+    border-radius: 10px 0 0 0;
+}
+
+#sudoku-board tr:nth-of-type(1) td:nth-last-of-type(1) {
+    border-radius: 0 10px 0 0;
+}
+
+#sudoku-board tr:nth-last-of-type(1) {
+    border-bottom: none;
+}
+
+#sudoku-board tr:nth-last-of-type(1) td:nth-of-type(1) {
+    border-radius: 0 0 0 10px;
+}
+
+#sudoku-board tr:nth-last-of-type(1) td:nth-last-of-type(1) {
+    border-radius: 0 0 10px 0;
+}
+
+#sudoku-board td:hover {
+    background-color: #eeeeee;
+}
+
+#sudoku-board .active-cell, #sudoku-board .active-cell:hover {
+    background-color: #dddddd;
+}
+
+#sudoku-board .warning, #sudoku-board .warning:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+#sudoku-board .warning.active-cell, #sudoku-board .warning.active-cell:hover {
+    background-color: darkred;
+    color: #fff;
+}
+
+#sudoku-board .calculated {
+    font-weight: 400;
+}
+
+#sudoku-buttons td {
+    width: 30px;
+    height: 30px;
+    background-color: royalblue;
+    color: #fff;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: skyblue midnightblue midnightblue skyblue;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sudoku-buttons td:hover {
+    background-color: midnightblue;
+}
+
+#sudoku-buttons #go {
+    background-color: seagreen;
+    border-color: mediumspringgreen darkgreen darkgreen mediumspringgreen;
+}
